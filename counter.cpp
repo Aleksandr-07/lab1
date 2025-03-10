@@ -49,7 +49,7 @@ int main() {
     std::cout << "Счетчик без синхронизации: " << counter << ", время: " << duration.count() << " ms" << std::endl;
 
     // С использованием std::atomic
-    counter = 0; // Сброс счётчика
+    counter = 0; 
     start_time = std::chrono::high_resolution_clock::now();
     threads.clear();
     for (int i = 0; i < num_threads; ++i) {
@@ -63,7 +63,7 @@ int main() {
     std::cout << "Счетчик с использованием std::atomic: " << atomic_counter << ", время: " << duration.count() << " ms" << std::endl;
 
     // С использованием std::mutex
-    counter = 0; // Сброс счётчика
+    counter = 0; 
     start_time = std::chrono::high_resolution_clock::now();
     threads.clear();
     for (int i = 0; i < num_threads; ++i) {
