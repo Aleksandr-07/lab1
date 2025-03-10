@@ -2,13 +2,13 @@
 #include <boost/thread.hpp>
 #include <boost/chrono.hpp>
 
-// Рекурсивная функция вычисления числа Фибоначчи
+// Рекурсивная функция вычисления чисел Фибоначчи
 int fibonacci(int n) {
     if (n <= 1) return n;
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-// Функция для многопоточернр вычтсления
+// Функция для многопоточного вычисления
 void thread_function(int m) {
     int result = fibonacci(m);
     std::cout << "Поток " << boost::this_thread::get_id() << " для числа Фибоначчи(" << m << ") = " << result << std::endl;
